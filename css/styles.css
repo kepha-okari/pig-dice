@@ -1,0 +1,18 @@
+#header{
+  text-align: center;
+  color: blue;
+  background-color: black;
+}
+.wrapper {
+  background-image: url(../img/background-dice.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+
+}
+#dice-pic {
+vertical-align: auto;
+}
+#player-names-section {
+/*  margin-right: 20px;
+  margin-left: 20px;*/
+}
