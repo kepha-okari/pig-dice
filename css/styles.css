@@ -1,6 +1,6 @@
 #header{
   text-align: center;
-  color: blue;
+  color: red;
   background-color: black;
 }
 .wrapper {
@@ -11,8 +11,12 @@
 }
 #dice-pic {
 vertical-align: auto;
+margin: 10px;
 }
 #player-names-section {
 /*  margin-right: 20px;
   margin-left: 20px;*/
+}
+#playerNames {
+  padding-left:80px; 
 }
