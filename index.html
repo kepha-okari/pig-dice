@@ -7,7 +7,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">    
 	<title>Pig Dice</title>
 </head>
-<body>
+<body class="wrapper">
 
 
 	<section class="row" id="header">
@@ -15,13 +15,16 @@
 	</section>
 	<!--    end of header -->
 
-	<div class="container-fluid wrapper">
+	<div class="container">
 	    <section class="row" >
-	    	<h3 class="newGame">New Game</h3>
+	    	<center>
+		    	<h3 class="newGame"><button class="roll1 btn btn-success">New Game</button></h3>
+		    </center>
 	        <form id="playerNames" class="form-group">
-	            <h3>Insert your names to play:</h3>
+	            
 	            <div class="row" id="player-names-section">
 	            	<center>
+	            		<h3>Enter your names to play</h3>
 		                <section class="col-md-5 col-md-offset-1">
 		                    <label for="player1">Player1</label>
 		                    <input type="text" required id="player1Name" class="form-control">
@@ -32,7 +35,7 @@
 		                </section>
 		            </center>
 	            </div>
-	            <center><button type="submit" class="btn" id="playButton">Play</button></center>
+	            <center><button type="submit" class="btn btn-success" id="playButton">Save names</button></center>
 	        </form>
 
 	    </section>  
@@ -71,9 +74,9 @@
 			</div>
 			<!-- end of player 2 -->
 
-			<div class="row">
+			<!-- <div class="row">
 			<CENTER><h2>footer</h2></CENTER>
-			</div>
+			</div> -->
 			  <!-- footer -->
 
 		</section>
