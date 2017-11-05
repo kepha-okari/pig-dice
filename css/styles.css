@@ -3,20 +3,28 @@
   color: red;
   background-color: black;
 }
+
+h1,h2,h3,h4,label {
+  color: red;
+  text-align: center;
+}
 .wrapper {
   background-image: url(../img/background-dice.jpg);
   background-size:cover;
+  height: 80%;
   background-repeat: no-repeat;
 
+}
+#playButton {
+  margin-top: 10px;
 }
 #dice-pic {
 vertical-align: auto;
 margin: 10px;
 }
 #player-names-section {
-/*  margin-right: 20px;
-  margin-left: 20px;*/
+box-shadow: 10px;
 }
 #playerNames {
-  padding-left:80px; 
+  padding-left: 0px; 
 }
