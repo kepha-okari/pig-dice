@@ -70,7 +70,8 @@ $(document).ready(function(){
     		$(".player1-total-score").text(player1.turnScore);
     	} 		   
 		   	$(".player1-rolled-number").text(player1RolledNumber);
-		    $(".player1-turn-score").text(player1.Score);
+		    $(".player1-turn-score").text(player1.turnScore);
+		    $(".player1-total-score").text(player1.totalScore);
 
   });
 
@@ -81,11 +82,12 @@ $(document).ready(function(){
     	if (player2RolledNumber === 1) {
     		$(".player2-turn-score").text(player2.turnScore);
     		$(".player2-total-score").text(player2.score());
-    		alert("yes");
+    		/*alert(player2.score);*/
+    		console.log("num");
     	} 		   
 		   	$(".player2-rolled-number").text(player2RolledNumber);
 		    $(".player2-turn-score").text(player2.turnScore);
-
+		    $(".player2-total-score").text(player2.totalScore);
 		    
   });
 
