@@ -23,7 +23,10 @@ Player.prototype.score = function() {
   this.totalScore += this.turnScore ;
   this.turnScore = 0;
 }
-
+Player.prototype.totalScore = function() {
+  this.totalScore += this.turnScore ;
+  return this.totalScore;
+}
 
 // USER INTERFACE
 // this will hide the input fields for the players names
@@ -35,6 +38,7 @@ $(document).ready(function(){
 	// refresh the page for new players or new game
     $('.newGame').click(function() {
     location.reload();
+    //clears inputs fields after every refresh
     $("#player1Name").val("");
     $("#player2Name").val("");
 
@@ -59,20 +63,28 @@ $(document).ready(function(){
     $("#roll1").click(function(event) {
     event.preventDefault();
     var player1RolledNumber = player1.roll();
-	/*    if (player1RolledNumber === 1) {
-    	$("player1-turn-score").text(player1.turnScore);
-     	$(".player1").fadeOut(200);
-      //$("#well-play1").fadeOut(900);
-      	$("player2").show(900);
-    }*/
+
     	if (player1RolledNumber === 1) {
     		$(".player1-turn-score").text(player1.turnScore);
     		$(".player1-total-score").text(player1.turnScore);
+
+    		alert("winner is" + player1.playerName);// display turn is over
+    		$("#player1").show().fadeOut(1200);
+    		$("#player2").show();
     	} 		   
 		   	$(".player1-rolled-number").text(player1RolledNumber);
 		    $(".player1-turn-score").text(player1.turnScore);
-		    $(".player1-total-score").text(player1.totalScore);
+		    $(".player1-total-score").text(player1.totalScore());
 
+  });
+
+    $("#hold1").click(function(event) {
+    event.preventDefault();
+    player1.score();
+    $(".player1-total-score").text(player1.totalScore);
+    $(".player1-rolled-number").text("");
+    $(".player1-turn-score").text("");
+      
   });
 
  	$("#roll2").click(function(event) {
@@ -83,7 +95,10 @@ $(document).ready(function(){
     		$(".player2-turn-score").text(player2.turnScore);
     		$(".player2-total-score").text(player2.score());
     		/*alert(player2.score);*/
-    		console.log("num");
+    		alert("Aggregate Total is" + player2.totalScore);
+    		alert("winner is" + player2.playerName);// display turn is over
+    		$("#player2").show().fadeOut(1200);
+    		$("#player1").show();
     	} 		   
 		   	$(".player2-rolled-number").text(player2RolledNumber);
 		    $(".player2-turn-score").text(player2.turnScore);
@@ -91,6 +106,16 @@ $(document).ready(function(){
 		    
   });
 
+ // hold button for player 2	
+
+  $("#hold2").click(function(event) {
+    event.preventDefault();
+    player2.score();
+    $(".player2-total-score").text(player2.totalScore);
+    $(".player2-rolled-number").text("");
+    $(".player2-turn-score").text("");
+ 
+  });
 
 
  
