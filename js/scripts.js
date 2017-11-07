@@ -66,15 +66,15 @@ $(document).ready(function(){
 
     	if (player1RolledNumber === 1) {
     		$(".player1-turn-score").text(player1.turnScore);
-    		$(".player1-total-score").text(player1.turnScore);
+    		$(".player1-total-score").text(player1.score());
 
-    		alert("winner is" + player1.playerName);// display turn is over
+    		alert("Oop! You rolled a 1, it is   " + player2.playerName + "'s turn");// display turn is over
     		$("#player1").show().fadeOut(1200);
     		$("#player2").show();
     	} 		   
 		   	$(".player1-rolled-number").text(player1RolledNumber);
 		    $(".player1-turn-score").text(player1.turnScore);
-		    $(".player1-total-score").text(player1.totalScore());
+		    $(".player1-total-score").text(player1.totalScore);
 
   });
 
@@ -95,8 +95,7 @@ $(document).ready(function(){
     		$(".player2-turn-score").text(player2.turnScore);
     		$(".player2-total-score").text(player2.score());
     		/*alert(player2.score);*/
-    		alert("Aggregate Total is" + player2.totalScore);
-    		alert("winner is" + player2.playerName);// display turn is over
+    		alert("Oop! You rolled a 1, it is   " + player1.playerName + "'s turn");// display turn is over// display turn is over
     		$("#player2").show().fadeOut(1200);
     		$("#player1").show();
     	} 		   
