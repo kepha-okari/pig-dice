@@ -81,6 +81,14 @@ $(document).ready(function(){
     $("#hold1").click(function(event) {
     event.preventDefault();
     player1.score();
+        if (player1.totalScore >= 100) {
+    		$(".player1-turn-score").text(player1.turnScore);
+    		$(".player1-total-score").text(player1.score());
+    		alert("HEY " + player1.playerName + " CONGRATS, YOU WON!!!!!");// display turn is over// display turn is over
+    		$("#player1").show().fadeOut(2000);
+    		$("#player2").show();
+    		location.reload();
+    	} 	
     $(".player1-total-score").text(player1.totalScore);
     $(".player1-rolled-number").text("");
     $(".player1-turn-score").text("");
@@ -110,6 +118,16 @@ $(document).ready(function(){
   $("#hold2").click(function(event) {
     event.preventDefault();
     player2.score();
+
+    if (player2.totalScore >= 100) {
+    		$(".player2-turn-score").text(player2.turnScore);
+    		$(".player2-total-score").text(player2.score());
+    		/*alert(player2 .score);*/
+    		alert("HEY " + player2.playerName + " CONGRATS, YOU WON!!!!!");// display turn is over// display turn is over
+    		$("#player2").show().fadeOut(2000);
+    		$("#player1").show();
+    		location.reload();
+    	} 	
     $(".player2-total-score").text(player2.totalScore);
     $(".player2-rolled-number").text("");
     $(".player2-turn-score").text("");
