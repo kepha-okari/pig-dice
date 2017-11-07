@@ -126,7 +126,7 @@ $(document).ready(function(){
     		alert("HEY " + player2.playerName + " CONGRATS, YOU WON!!!!!");// display turn is over// display turn is over
     		$("#player2").show().fadeOut(2000);
     		$("#player1").show();
-    		location.reload();
+    		location.reload();// refresh the page after a win to bigin new game
     	} 	
     $(".player2-total-score").text(player2.totalScore);
     $(".player2-rolled-number").text("");
