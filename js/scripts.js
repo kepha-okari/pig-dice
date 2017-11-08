@@ -2,7 +2,7 @@
 
 
 // BUSINESS LOGIC
-function Player(playerName, turnScore, totalScore) {
+var  Player = function(playerName, turnScore, totalScore) {
   this.playerName = playerName;
   this.turnScore = turnScore;
   this.totalScore = totalScore;
@@ -92,6 +92,9 @@ $(document).ready(function(){
     $(".player1-total-score").text(player1.totalScore);
     $(".player1-rolled-number").text("");
     $(".player1-turn-score").text("");
+    //switch player
+    $("#player1").show().fadeOut(1200);
+    $("#player2").show();
       
   });
 
@@ -110,7 +113,7 @@ $(document).ready(function(){
 		   	$(".player2-rolled-number").text(player2RolledNumber);
 		    $(".player2-turn-score").text(player2.turnScore);
 		    $(".player2-total-score").text(player2.totalScore);
-		    
+
   });
 
  // hold button for player 2	
@@ -127,10 +130,14 @@ $(document).ready(function(){
     		$("#player2").show().fadeOut(2000);
     		$("#player1").show();
     		location.reload();// refresh the page after a win to bigin new game
-    	} 	
-    $(".player2-total-score").text(player2.totalScore);
-    $(".player2-rolled-number").text("");
-    $(".player2-turn-score").text("");
+    } 	
+      $(".player2-total-score").text(player2.totalScore);
+      $(".player2-rolled-number").text("");
+      $(".player2-turn-score").text("");
+      //switch player
+      $("#player2").show().fadeOut(1200);
+      $("#player1").show();
+          
  
   });
 
