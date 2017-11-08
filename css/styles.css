@@ -8,6 +8,12 @@ h1,h2,h3,h4,label {
   color: red;
   text-align: center;
 }
+span {
+  font-family: cursive;
+  font-variant: inherit;
+  font-weight: 50px;
+  color: red;
+}
 .wrapper {
   background-image: url(../img/background-dice.jpg);
   background-size:cover;
